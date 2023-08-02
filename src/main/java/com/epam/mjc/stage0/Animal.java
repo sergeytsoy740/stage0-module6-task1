@@ -2,20 +2,6 @@ package com.epam.mjc.stage0;
 
 public class Animal {
 
-    public static void main(String[] args) {
-        //Animal a = new Animal("green", 1, false);
-        //System.out.println(a.getDescription());
-
-        /*(Optional) Create an object of each class and call getDescription() method for both of them.
-        Try to explain the output results.*/
-        Dog dog = new Dog();
-        System.out.println(dog.getDescription());
-
-        Animal bird = new Bird();
-        System.out.println(bird.getDescription());
-
-    }
-
     //Provide it with 3 private fields - color(String), numberOfPaws(int), hasFur(boolean).
     private String color;
     private int numberOfPaws;
@@ -35,10 +21,10 @@ public class Animal {
     /*(Optional) In the method getDescription() change the word 'paw' depending on the numberOfPaws:
     number of paws is 1 -> 'paw', number of paws is different from 1 -> 'paws'.*/
     String getDescription() {
-        String fur = isHasFur() ? "a" : "no";
-        String paws = getNumberOfPaws() == 1 ? "paw" : "paws";
+      //  return "This animal is mostly " + color + ". It has " + numberOfPaws +
+      //          " " + (numberOfPaws == 1 ? "paw" : "paws") + " and " + (hasFur ? "a" : "no") + " fur.";
         return "This animal is mostly " + getColor() + ". It has " + getNumberOfPaws() +
-                " " + paws + " and " + fur + " fur.";
+                " " + (getNumberOfPaws() == 1 ? "paw" : "paws") + " and " + (isHasFur() ? "a" : "no") + " fur.";
     }
 
     public String getColor() {
