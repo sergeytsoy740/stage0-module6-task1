@@ -1,8 +1,8 @@
 package com.epam.mjc.stage0;
 
 public class Bird extends Animal {
-    private int wings = 2;
-    private boolean isFlying = true;
+    //private int wings = 2;
+    //private boolean isFlying = true;
 
     public Bird() {
         super("blue", 2, false);
@@ -16,16 +16,17 @@ public class Bird extends Animal {
     String getDescription() {
         String fur = isHasFur() ? "a" : "no";
         String paws = getNumberOfPaws() == 1 ? "paw" : "paws";
-        String isFlying = isFlying() ? "can fly." : "cannot fly.";
+        //String isFlying = isFlying() ? "can fly." : "cannot fly.";
         return "This animal is mostly " + getColor() + ". It has " + getNumberOfPaws() +
-                " " + paws + " and " + fur + " fur. Moreover, it has " + getWings() + " wings and " + isFlying;
+                " " + paws + " and " + fur + " fur. Moreover, it has 2 wings and can fly.";
+                //Moreover, it has " + getWings() + " wings and " + isFlying;
     }
 
-    public int getWings() {
+   /* public int getWings() {
         return wings;
-    }
+    }*/
 
-    public boolean isFlying() {
+   /* public boolean isFlying() {
         return isFlying;
-    }
+    }*/
 }
