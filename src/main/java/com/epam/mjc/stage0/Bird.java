@@ -6,14 +6,10 @@ public class Bird extends Animal {
         super("blue", 2, false);
     }
 
-    /*Override getDescription() method for class Bird: add one more sentence to the description.
-    The result must be:
-    "This animal is mostly blue. It has 2 paws and no fur. Moreover, it has 2 wings and can fly." */
-
     @Override
-    String getDescription() {
-        return "This animal is mostly " + getColor() + ". It has " + getNumberOfPaws() +
-                " " + (getNumberOfPaws() == 1 ? "paw" : "paws") + " and " + (isHasFur() ? "a" : "no") + " fur. " +
+    public String getDescription() {
+        return "This animal is mostly " + this.getColor() + ". It has " + this.getNumberOfPaws() +
+                " " + (this.getNumberOfPaws() == 1 ? "paw" : "paws") + " and " + (this.isHasFur() ? "a" : "no") + " fur. " +
                 "Moreover, it has 2 wings and can fly.";
     }
 }
